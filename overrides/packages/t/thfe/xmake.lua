@@ -7,6 +7,7 @@ package("thfe")
 
   add_versions("12.10.2024", "9373b5d8a5b022ca5b4e112ae1c2440bc18e160c")
 
+  add_configs("shared", {description = "Build shared libraries", default = true, type = "boolean", readonly = true})
   add_configs("fftw", {description = "Add libtfhe-fftw for fast FFT computations", default = true, type = "boolean"})
   add_configs("nayuki_portable", {description = "Add libtfhe-nayuki-portable using the fast C version of nayuki for FFT computations", default = false, type = "boolean"})
   add_configs("nayuki_avx", {description = "Add libtfhe-spqlios-avx using tfhe's dedicated avx assembly version for FFT computations", default = false, type = "boolean"})
@@ -26,7 +27,6 @@ package("thfe")
 
     local configs = {
           "-DCMAKE_BUILD_TYPE=" .. (package:is_debug() and "Debug" or "Release"),
-          "-DBUILD_SHARED_LIBS=" .. (package:config("shared") and "ON" or "OFF"),
           "-DENABLE_TESTS=off",
           "-DENABLE_FFTW=" .. (package:config("fftw") and "ON" or "OFF"),
           "-DENABLE_NAYUKI_PORTABLE=" .. (package:config("nayuki_portable") and "ON" or "OFF"),
