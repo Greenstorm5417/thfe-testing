@@ -1,1 +1,40 @@
-{ }
+{
+    thfe = {
+        version = "12.10.2024",
+        license = "Apache-2.0",
+        links = {
+            "tfhe-fftw",
+            "fftw3_threads",
+            "fftw3"
+        },
+        libfiles = {
+            "/home/green/.xmake/packages/t/thfe/12.10.2024/453866dc7b274b6f92574f25615f7a2d/lib/libtfhe-fftw.so",
+            "/home/green/.xmake/packages/f/fftw/3.3.10/574291cf12ea4d57bfa3139518f41129/lib/libfftw3_threads.a",
+            "/home/green/.xmake/packages/f/fftw/3.3.10/574291cf12ea4d57bfa3139518f41129/lib/libfftw3.a"
+        },
+        __requirestr = "thfe",
+        syslinks = "pthread",
+        __requireconfs = {
+            configs = {
+                fftw = true
+            }
+        },
+        envs = {
+            PATH = {
+                "/home/green/.xmake/packages/n/ninja/v1.13.2/0a9451759a4647b5923438b464085dd6/bin",
+                "/home/green/.xmake/packages/c/cmake/4.3.4/478c5cdb1d4b47ff91b42b2ceeb382a8/bin"
+            }
+        },
+        linkdirs = {
+            "/home/green/.xmake/packages/t/thfe/12.10.2024/453866dc7b274b6f92574f25615f7a2d/lib",
+            "/home/green/.xmake/packages/f/fftw/3.3.10/574291cf12ea4d57bfa3139518f41129/lib"
+        },
+        installdir = "/home/green/.xmake/packages/t/thfe/12.10.2024/453866dc7b274b6f92574f25615f7a2d",
+        sysincludedirs = {
+            "/home/green/.xmake/packages/t/thfe/12.10.2024/453866dc7b274b6f92574f25615f7a2d/include",
+            "/home/green/.xmake/packages/f/fftw/3.3.10/574291cf12ea4d57bfa3139518f41129/include"
+        },
+        __enabled = true,
+        shared = true
+    }
+}
