@@ -1,10 +1,11 @@
 add_rules("mode.debug", "mode.release")
+add_rules("plugin.compile_commands.autoupdate")
 
 add_repositories("overrides overrides")
 
-add_requires("thfe")
+-- add_requires("thfe")
 
 target("hello world")
-add_packages("thfe")
-set_kind("binary")
-add_files("src/*.cpp")
+--     add_packages("thfe")
+    set_kind("binary")
+    add_files("src/*.cpp")
