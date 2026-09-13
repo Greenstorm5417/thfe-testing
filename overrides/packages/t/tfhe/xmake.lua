@@ -1,4 +1,4 @@
-package("thfe")
+package("tfhe")
   set_homepage("https://github.com/tfhe/tfhe")
   set_license("Apache-2.0")
   set_description("TFHE: Fast Fully Homomorphic Encryption Library over the Torus")

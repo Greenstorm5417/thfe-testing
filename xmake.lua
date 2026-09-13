@@ -3,9 +3,9 @@ add_rules("plugin.compile_commands.autoupdate")
 
 add_repositories("overrides overrides")
 
-add_requires("thfe", { configs = { fftw = true } })
+add_requires("tfhe", { configs = { fftw = true } })
 
 target("tfhe-testing")
-    add_packages("thfe")
+    add_packages("tfhe")
     set_kind("binary")
     add_files("src/*.cpp")
